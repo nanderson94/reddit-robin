@@ -16,7 +16,7 @@ function checkSubreddit(name) {
   request("https://reddit.com/r/"+name, (err, res, body) => {
     let $ = cheerio.load(body);
     let msg = $("code").text().trim();
-    fs.writeFileSync(name+".txt", msg+"\n");
+    fs.appendFileSync(name+".txt", msg+"\n");
   });
 }
 
