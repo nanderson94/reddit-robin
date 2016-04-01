@@ -1,0 +1,12 @@
+[Unit]
+Description=Reddit Robin
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/root/reddit-robin/
+ExecStart=/usr/bin/node /root/reddit-robin/index.js

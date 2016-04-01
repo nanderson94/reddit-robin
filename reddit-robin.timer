@@ -1,0 +1,10 @@
+[Unit]
+Description=Reddit Robin
+
+[Timer]
+OnUnitActiveSec=5m
+Unit=reddit-robin.service
+OnBootSec=20s
+
+[Install]
+WantedBy=timers.target
